@@ -12,6 +12,8 @@ import Link from '../Link'
 import { useSessionStart } from '../../contexts/Application'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
 import Toggle from '../Toggle'
+import Row from '../Row'
+import kccLogo from '../../assets/kcc-token-logo.png'
 
 const Wrapper = styled.div`
   height: ${({ isMobile }) => (isMobile ? 'initial' : '100vh')};
@@ -67,6 +69,7 @@ const HeaderText = styled.div`
   display: inline-box;
   display: -webkit-inline-box;
   opacity: 0.8;
+  color: ${({ theme }) => theme.white};
   :hover {
     opacity: 1;
   }
@@ -183,8 +186,17 @@ function SideNav({ history }) {
                 Twitter
               </Link>
             </HeaderText> */}
+            <Row>
+              <Row>
+                <img width={'14px'} src={kccLogo} />
+
+                <HeaderText style={{ marginLeft: '4px' }}>Kcc Testnet(322)</HeaderText>
+              </Row>
+            </Row>
+
             <Toggle isActive={isDark} toggle={toggleDarkMode} />
           </AutoColumn>
+
           {!below1180 && (
             <Polling style={{ marginLeft: '.5rem' }}>
               <PollingDot />
