@@ -6,7 +6,7 @@ export const client = new ApolloClient({
   link: new HttpLink({
     // uri: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswapv2',
     // uri: 'https://api.thegraph.com/subgraphs/name/messari/sushiswap-ethereum-pruned',
-    uri: 'http://gincool.com:8000/subgraphs/name/ginlink/Swap99',
+    uri: 'https://subgraph.gincool.com/subgraphs/name/ginlink/Swap99',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -15,7 +15,7 @@ export const client = new ApolloClient({
 export const healthClient = new ApolloClient({
   link: new HttpLink({
     uri: 'https://api.thegraph.com/index-node/graphql',
-    // uri: 'http://gincool.com:8000/index-node/graphql',
+    // uri: 'https://subgraph.gincool.com/index-node/graphql',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -40,7 +40,7 @@ export const stakingClient = new ApolloClient({
 export const blockClient = new ApolloClient({
   link: new HttpLink({
     // uri: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
-    uri: 'http://gincool.com:8000/subgraphs/name/ginlink/Block99',
+    uri: 'https://subgraph.gincool.com/subgraphs/name/ginlink/Block99',
   }),
   cache: new InMemoryCache(),
 })
