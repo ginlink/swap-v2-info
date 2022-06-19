@@ -1,5 +1,6 @@
 {
-  "name": "@uniswap/info",
+  "name": "@ginlink/swap-info",
+  "version": "0.1.0",
   "private": true,
   "homepage": "https://info.uniswap.org",
   "devDependencies": {
