@@ -15,7 +15,8 @@ const theme = (darkMode, color) => ({
   textColor: darkMode ? color : 'black',
 
   panelColor: darkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0)',
-  backgroundColor: darkMode ? '#212429' : '#F7F8FA',
+  // backgroundColor: darkMode ? '#212429' : '#F7F8FA',
+  backgroundColor: darkMode ? 'rgba(0, 188, 212, 1)' : 'rgba(0, 188, 212, 1)',
 
   uniswapPink: darkMode ? '#ff007a' : 'black',
 
@@ -47,12 +48,19 @@ const theme = (darkMode, color) => ({
   onlyLight: darkMode ? '#22242a' : 'transparent',
   divider: darkMode ? 'rgba(43, 43, 43, 0.435)' : 'rgba(43, 43, 43, 0.035)',
 
+  // //primary colors
+  // primary1: darkMode ? '#2172E5' : '#ff007a',
+  // primary2: darkMode ? '#3680E7' : '#FF8CC3',
+  // primary3: darkMode ? '#4D8FEA' : '#FF99C9',
+  // primary4: darkMode ? '#376bad70' : '#F6DDE8',
+  // primary5: darkMode ? '#153d6f70' : '#FDEAF1',
+
   //primary colors
-  primary1: darkMode ? '#2172E5' : '#ff007a',
-  primary2: darkMode ? '#3680E7' : '#FF8CC3',
-  primary3: darkMode ? '#4D8FEA' : '#FF99C9',
-  primary4: darkMode ? '#376bad70' : '#F6DDE8',
-  primary5: darkMode ? '#153d6f70' : '#FDEAF1',
+  primary1: darkMode ? '#2172E5' : 'rgba(0, 188, 212, 1)',
+  primary2: darkMode ? '#3680E7' : '#00bcd4',
+  primary3: darkMode ? '#4D8FEA' : '#4dd0e1',
+  primary4: darkMode ? '#376bad70' : 'rgba(0, 188, 212, 1)',
+  primary5: darkMode ? '#153d6f70' : '#e0f7fa',
 
   // color text
   primaryText1: darkMode ? '#6da8ff' : '#ff007a',

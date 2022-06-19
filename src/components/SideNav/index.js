@@ -12,6 +12,8 @@ import Link from '../Link'
 import { useSessionStart } from '../../contexts/Application'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
 import Toggle from '../Toggle'
+import Row from '../Row'
+import kccLogo from '../../assets/kcc-token-logo.png'
 
 const Wrapper = styled.div`
   height: ${({ isMobile }) => (isMobile ? 'initial' : '100vh')};
@@ -67,6 +69,7 @@ const HeaderText = styled.div`
   display: inline-box;
   display: -webkit-inline-box;
   opacity: 0.8;
+  color: ${({ theme }) => theme.white};
   :hover {
     opacity: 1;
   }
@@ -164,32 +167,36 @@ function SideNav({ history }) {
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
-              <Link href="https://uniswap.org" target="_blank">
-                Uniswap.org
+              <Link href="https://swap.gincool.com" target="_blank">
+                Coolswap
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://v1.uniswap.info" target="_blank">
-                V1 Analytics
-              </Link>
-            </HeaderText>
-            <HeaderText>
-              <Link href="https://uniswap.org/docs/v2" target="_blank">
+              <Link href="https://gincool.com/docs/v2" target="_blank">
                 Docs
               </Link>
             </HeaderText>
-            <HeaderText>
+            {/* <HeaderText>
               <Link href="https://discord.com/invite/FCfyBSbCU5" target="_blank">
                 Discord
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://twitter.com/UniswapProtocol" target="_blank">
+              <Link href="https://twitter.com/CoolswapProtocol" target="_blank">
                 Twitter
               </Link>
-            </HeaderText>
+            </HeaderText> */}
+            <Row>
+              <Row>
+                <img width={'14px'} src={kccLogo} />
+
+                <HeaderText style={{ marginLeft: '4px' }}>Kcc Testnet(322)</HeaderText>
+              </Row>
+            </Row>
+
             <Toggle isActive={isDark} toggle={toggleDarkMode} />
           </AutoColumn>
+
           {!below1180 && (
             <Polling style={{ marginLeft: '.5rem' }}>
               <PollingDot />
